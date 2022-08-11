@@ -1,0 +1,41 @@
+{
+  "name": "@cse-48/react-lib-temp",
+  "version": "1.1.0",
+  "description": "",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/cse-48"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rollup": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cse-48/react-lib-temp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cse-48/react-lib-temp/issues"
+  },
+  "homepage": "https://github.com/cse-48/react-lib-temp#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.4",
+    "@types/react": "^18.0.17",
+    "react": "^18.2.0",
+    "rollup": "^2.77.3",
+    "rollup-plugin-dts": "^4.2.2",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "tslib": "^2.4.0"
+  }
+}
