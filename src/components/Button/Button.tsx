@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ElementType, ReactNode } from "react";
 
 const containerClasses = `display-inline-flex
     align-items-center
@@ -13,20 +13,23 @@ const containerClasses = `display-inline-flex
     border-width-1`;
 
 interface ButtonProps {
+  as: ElementType;
   className?: string;
   dataTestingId?: string;
   handleOnClick: () => void;
   children: ReactNode;
 }
 const defaultProps = {
+  as: "button",
   className: "",
   dataTestingId: "",
   children: <button>click me</button>,
 };
 const Button = (props: ButtonProps) => {
   const buttonClasses = `${props.className} ${containerClasses}`;
+  const { as: Tag } = props;
   return (
-    <div
+    <Tag
       className={buttonClasses}
       data-testing-id={
         props.dataTestingId ? props.dataTestingId + "-button" : "button"
@@ -34,7 +37,7 @@ const Button = (props: ButtonProps) => {
       onClick={props.handleOnClick}
     >
       {props.children}
-    </div>
+    </Tag>
   );
 };
 
